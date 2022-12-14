@@ -12,6 +12,11 @@ async function main (skill) {
         timeout:0,
         waitUntil:'networkidle0',
     })
+//  Get a screenshot of the page
+  // await page.screenshot({ path: 'example.png', fullPage: true });
+
+  //  Get a PDF of the page
+  // await page.pdf({ path: 'example.pdf', format: 'A4' });
 
     const jobData = await page.evaluate(async (data) => {
         const items = document.querySelectorAll('td.resultContent')
